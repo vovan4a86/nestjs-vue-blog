@@ -4,13 +4,23 @@
     <p>This blog built with Nest.js, Vue.js and MongoDB</p>
     <div v-if="posts.length === 0">No post found</div>
 
-    <div class="row mx-none">
-      <div class="col-md-4" v-for="(post) in posts" :key="post._id">
+    <div class="row mx-auto">
+      <div class="col-12 col-md-6 col-xl-4" v-for="(post) in posts" :key="post._id">
         <div class="card mb-4 shadow-sm">
           <div class="card-body">
             <h2 class="card-img-top">{{ post.title }}</h2>
             <p class="card-text">{{ post.body }}</p>
-              <div class="btn-group mb-2">
+            <div class="card-footer">
+              <div class="info">
+                <small class="text-muted">
+                  Posted on: {{ post.posted_at }}
+                </small><br>
+                <small class="text-muted">
+                  by: {{ post.author }}
+                </small>
+              </div>
+
+              <div class="btn-group mt-2">
                 <router-link
                     :to="{name: 'post', params: {id: post._id}}"
                     class="btn btn-sm btn-outline-secondary mx-1"
@@ -27,13 +37,6 @@
                 >Delete Post
                 </button>
               </div>
-            <div class="card-footer">
-              <small class="text-muted">
-                Posted on: {{ post.posted_at }}
-              </small><br>
-              <small class="text-muted">
-                by: {{ post.author }}
-              </small>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="form-wrapper col-md-12">
+    <div class="form-wrapper mx-auto col-11 col-md-6">
       <h2>Create Post</h2>
       <form id="create-post-form" @submit.prevent="submitPost">
         <div class="form-group col-md-12">
@@ -19,9 +19,7 @@
           <label for="author">Author</label>
           <input type="text" id="author" v-model="author" name="author" class="form-control" placeholder="Enter author name">
         </div>
-        <div class="form-group col-md-4 pull-right">
-          <button class="btn btn-success" type="submit">Create Post</button>
-        </div>
+        <button class="btn btn-success mt-3" type="submit">Create Post</button>
       </form>
     </div>
   </div>

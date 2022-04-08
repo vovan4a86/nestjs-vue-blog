@@ -5,7 +5,7 @@
         <button class="btn btn-success" @click="navigate()">View All Posts</button>
       </small>
     </h4>
-    <div class="form-wrapper col-md-12">
+    <div class="form-wrapper mx-auto col-md-6">
       <h2>Create Post</h2>
       <form id="create-post-form" @submit.prevent="editPost">
         <div class="form-group col-md-12">
@@ -24,9 +24,7 @@
           <label for="author">Author</label>
           <input type="text" id="author" v-model="post.author" name="author" class="form-control" placeholder="Enter author name">
         </div>
-        <div class="form-group col-md-4 pull-right">
-          <button class="btn btn-success" type="submit">Edit Post</button>
-        </div>
+        <button class="btn btn-success mt-3" type="submit">Edit Post</button>
       </form>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <div class="col-sm-12">
+    <div class="col-sm-10 mx-auto">
       <h4 class="mt-3">
         <small><button class="btn btn-success" @click="navigate">View All Posts</button></small>
       </h4>
